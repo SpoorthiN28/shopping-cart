@@ -84,7 +84,9 @@ h1 {
 }
 
 .product img {
+  max-width: 100%;
   width: 100%;
+  height: auto;
   border-radius: 6px;
 }
 
@@ -249,6 +251,7 @@ h1 {
     opacity: 0;
     transform: translateY(-50px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -260,8 +263,40 @@ h1 {
     opacity: 0;
     transform: translateX(50px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  #main-title img {
+    width: 2rem;
+    margin-right: 0.5rem;
+  }
+
+  #main-header button {
+    font-size: 1rem;
+    padding: 0.25rem 1rem;
+  }
+
+  #products {
+    width: 100%;
+    overflow-x: hidden;
+
+  }
+
+  #products {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  #modal {
+    width: 80%;
   }
 }
