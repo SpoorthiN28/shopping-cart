@@ -1,22 +1,25 @@
-import Header from './components/Header.jsx';
-import Shop from './components/Shop.jsx';
-import Product from './components/Product.jsx';
-import { DUMMY_PRODUCTS } from './dummy-products.js';
-import CartContextProvider from './store/shopping-cart.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AuthCheck from './components/Authentication/AuthCheck.jsx';
+import Signup from './components/Authentication/Signup.jsx';
+import Login from './components/Authentication/Login.jsx';
+import Home from './components/Shopping/Home.jsx';
+import ShoppingCart from './components/Shopping/ShoppingCart.jsx'
 
 function App() {
 
   return (
-    <CartContextProvider>
-      <Header />
-      <Shop>
-        {DUMMY_PRODUCTS.map((product) => (
-          <li key={product.id}>
-            <Product {...product} />
-          </li>
-        ))}
-      </Shop>
-    </CartContextProvider>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path='/shopping' element={
+          <AuthCheck>
+            <ShoppingCart />
+          </AuthCheck>
+        } />
+      </Routes>
+    </Router>
   );
 }
 

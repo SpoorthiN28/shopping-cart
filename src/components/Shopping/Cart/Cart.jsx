@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 
-import { CartContext } from "../store/shopping-cart.jsx";
+import { CartContext } from "../../../store/shopping-cart.jsx";
+
+import classes from './Cart.module.css';
 
 export default function Cart() {
   const { items, updatedItemQuantity } = useContext(CartContext);
@@ -12,10 +14,10 @@ export default function Cart() {
   const formattedTotalPrice = `Rs. ${totalPrice.toFixed(2)}`;
 
   return (
-    <div id="cart">
+    <div className={classes.cart}>
       {items.length === 0 && <p>No items in cart!</p>}
       {items.length > 0 && (
-        <ul id="cart-items">
+        <ul className={classes.cartItems}>
           {items.map((item) => {
             const formattedPrice = `Rs. ${item.price.toFixed(2)}`;
 
@@ -25,7 +27,7 @@ export default function Cart() {
                   <span>{item.name}</span>
                   <span> ({formattedPrice})</span>
                 </div>
-                <div className="cart-item-actions">
+                <div className={classes.cartItemActions}>
                   <button onClick={() => updatedItemQuantity(item.id, -1)}>
                     -
                   </button>
@@ -39,7 +41,7 @@ export default function Cart() {
           })}
         </ul>
       )}
-      <p id="cart-total-price">
+      <p className={classes.cartTotalPrice}>
         Cart Total: <strong>{formattedTotalPrice}</strong>
       </p>
     </div>
