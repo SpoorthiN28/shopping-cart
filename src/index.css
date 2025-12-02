@@ -9,7 +9,11 @@ body {
   font-family: 'Merriweather', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(#31220b, #382e1b);
+  background-image: url(./assets/background1.jpg);
+  backdrop-filter: blur(10px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
   color: #f3e7d4;
   min-height: 100vh;
 }
@@ -27,6 +31,10 @@ h2,
 h3 {
   text-align: center;
   margin-bottom: 20px;
+}
+
+.homePage {
+  margin-top: 5rem;
 }
 
 #checkout {
@@ -70,8 +78,8 @@ h3 {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   h1 {
-    font-size: 18px;
+    font-size: 22px;
   }
 }

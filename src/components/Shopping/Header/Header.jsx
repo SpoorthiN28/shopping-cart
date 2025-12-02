@@ -33,10 +33,6 @@ export default function Header({ logout }) {
     navigate('/');
   }
 
-  function handleCheckout() {
-    
-  }
-
   const modal = useRef();
   const { items } = useContext(CartContext);
 
@@ -52,7 +48,7 @@ export default function Header({ logout }) {
     modalActions = (
       <>
         <button>Close</button>
-        <button onClick={handleCheckout}>Checkout</button>
+        <button>Checkout</button>
       </>
     );
   }
