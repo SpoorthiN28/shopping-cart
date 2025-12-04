@@ -38,7 +38,6 @@
 .modal label {
   display: block;
   margin-bottom: 5px;
-
 }
 
 .modal input {
@@ -86,7 +85,27 @@
 
 @media (max-width: 600px) {
   .modal {
-    width: 50%;
+    width: 70%;
+  }
+
+  .modal h2 {
+    font-size: 16px;
+  }
+
+  .modal label {
+    font-size: 12px;
+  }
+
+  .modal input {
+    font-size: 12px;
+  }
+
+  .modal form button {
+    font-size: 12px;
+  }
+
+  .modalLink {
+    font-size: 12px;
   }
 }
 

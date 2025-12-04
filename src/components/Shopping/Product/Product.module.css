@@ -51,3 +51,22 @@
 .productActions button:hover {
   background: #f5b744;
 }
+
+@media (max-width: 600px) {
+  .productContent h3 {
+    font-size: 12px;
+  }
+
+  .productPrice {
+    font-size: 12px;
+  }
+
+  .productContent p {
+    font-size: 10px;
+  }
+
+  .productActions button {
+    font-size: 12px;
+    padding: 0.2rem 0.5rem;
+  }
+}

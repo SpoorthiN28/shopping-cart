@@ -18,3 +18,13 @@
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 2rem;
 }
+
+@media (max-width: 600px) {
+  .shop {
+  width: 90%;
+  }
+
+  .shop h2 {
+    font-size: 14px;
+  }
+}

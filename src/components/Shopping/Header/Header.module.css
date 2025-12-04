@@ -37,13 +37,15 @@
 
 @media (max-width: 600px) {
   .mainTitle img {
-    width: 2rem;
-    margin-right: 0.5rem;
+    width: 1.5rem;
+    margin-right: 1rem;
   }
 
   .mainHeader button {
-    font-size: 1rem;
-    padding: 0.25rem 1rem;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    margin-left: -1rem;
+    white-space: nowrap;
   }
 }
 
@@ -52,8 +54,11 @@
     width: 3rem;
     margin-right: 1rem;
   }
+
   .mainHeader button {
     font-size: 1rem;
-    padding: 0.25rem 1rem;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    white-space: nowrap;
   }
 }

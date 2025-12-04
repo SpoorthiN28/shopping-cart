@@ -55,32 +55,22 @@ h2 {
   margin-bottom: 1rem;
 }
 
-@keyframes fade-slide-in-from-top {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fade-slide-in-from-right {
-  0% {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 600px) {
   h1 {
-    font-size: 22px;
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .homePage {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 601px) {
+  h1 {
+    font-size: 30px;
   }
 }
