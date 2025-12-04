@@ -58,6 +58,7 @@ h2 {
 @media (max-width: 600px) {
   h1 {
     font-size: 18px;
+    text-align: left;
   }
 
   h2 {
